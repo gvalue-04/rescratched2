@@ -23,7 +23,7 @@ private function primTutorialModAlert(b:Block):void {
     // DialogBox.notify usage:
     // * First argument is the title for the alert box.
     // * Second argument is the message.
-    DialogBox.notify("messaeg!", interp.arg(b, 0));
+    DialogBox.notify("message!", interp.arg(b, 0));
 }
 private function primAdvancedDialog(b:Block):void {
     // DialogBox.notify usage:
