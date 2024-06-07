@@ -117,6 +117,7 @@ public class ScratchExtension {
 		result.isInternal = true;
 		result.javascriptURL = ('https://raw.githubusercontent.com/griffpatch/Box2D.js-Scratch2-Extension/gh-pages/GriffpatchBox2D.v0.3.js');
 		result.thumbnailMD5 = 'c14047e09787cd75a2bc6aba68ceb0de.png';
+		result.displayName = "Griffpatch Box2D";
 		result.tags = ['hardware'];
 		return result;
 	}

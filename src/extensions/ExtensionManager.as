@@ -55,6 +55,7 @@ public class ExtensionManager {
 	static public const wedo2Ext:String = 'LEGO WeDo 2.0';
 	static public const box2DExt:String = 'Griffpatch Box2D';
 
+
 	// Experimental extensions must be hosted on one of these domains
 	// These should start with '.' to avoid accepting things like 'malicious.not_github.io'
 	static public const allowedDomains:Vector.<String> = new <String>[
@@ -86,6 +87,7 @@ public class ExtensionManager {
 		extensionDict[picoBoardExt] = ScratchExtension.PicoBoard();
 		extensionDict[wedoExt] = ScratchExtension.WeDo();
 		extensionDict[wedo2Ext] = ScratchExtension.WeDo2();
+		extensionDict[box2DExt] = ScratchExtension.Box2D();
 	}
 
 	// Should the interpreter force async communication with extensions?
@@ -246,7 +248,6 @@ public class ExtensionManager {
 		}
 		return result;
 	}
-
 	// -----------------------------
 	// Communications
 	//------------------------------
@@ -765,7 +766,7 @@ public class ExtensionManager {
 
 	public function hasExperimentalExtensions():Boolean {
 		for each (var ext:ScratchExtension in extensionDict) {
-			if (!ext.isInternal && ext.javascriptURL) {
+			if (ext.isInternal && ext.javascriptURL) {
 				return true;
 			}
 		}

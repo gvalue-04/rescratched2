@@ -16,7 +16,7 @@ public class DialogsPrims {
 
     public function addPrimsTo(primTable:Dictionary):void {
 		primTable['tutorialModAlert'] = primTutorialModAlert;
-        primTable['advancedDialog'] = primAdvancedDialog
+        primTable['advancedDialog'] = primAdvancedDialog;
     }
 
 private function primTutorialModAlert(b:Block):void {

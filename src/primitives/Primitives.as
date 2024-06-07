@@ -87,6 +87,7 @@ public class Primitives {
 		new VideoMotionPrims(app, interp).addPrimsTo(primTable);
 		new DialogsPrims(app, interp).addPrimsTo(primTable);
 		new AnnotationsPrims(app, interp).addPrimsTo(primTable);
+		new UserBlockPrims(app, interp).addPrimsTo(primTable);
 		addOtherPrims(primTable);
 	}
 

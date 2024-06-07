@@ -69,11 +69,12 @@ public class Specs {
 		[7,  "Sensing",		0x2ca5e2],
 		[8,  "Operators",	0x5cb712],
 		[9,  "Data",		variableColor],
-		[10, "More Blocks",	procedureColor],
+		[10, "Functions",	procedureColor],
 		[11, "Parameter",	parameterColor],
 		[12, "List",		listColor],
 		[13, "Dialogs",   0x60a05c],
 		[14, "Annotations", 0x009870],
+		[15, "User Blocks", 0x808080],
 		[20, "Extension",	extensionsColor],
 	];
 
@@ -113,6 +114,8 @@ public class Specs {
 
 	public static var commands:Array = [
 		// block specification					type, cat, opcode			default args (optional)
+		// user blocks
+		["is ReScratched cool?",                "b", 15, "rscratchedCoolBool",                       ],
 		// annotations
 		["// %s",                               " ", 14, "annotationBlock",         "This does this."],
 		["/* %s",                               "c", 14, "annotationC",             "This is a C comment."],
@@ -143,7 +146,7 @@ public class Specs {
 
 		// dialogs
 		["dialog %s", " ", 13, "tutorialModAlert", "Hello!"],
-		["title %s message %s", " ", 13, "advancedDialog", "OMG!!", "TEH EPIK DUCK IS COMING!!"],
+		["dialog %s %s", " ", 13, "advancedDialog", "OMG!!", "TEH EPIK DUCK IS COMING!!"],
 		// looks
 		["say %s for %n secs",					" ", 2, "say:duration:elapsed:from:",	"Hello!", 2],
 		["say %s",								" ", 2, "say:",							"Hello!"],
