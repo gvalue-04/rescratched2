@@ -16,6 +16,7 @@ public class DialogsPrims {
 
     public function addPrimsTo(primTable:Dictionary):void {
 		primTable['tutorialModAlert'] = primTutorialModAlert;
+        primTable['advancedDialog'] = primAdvancedDialog
     }
 
 private function primTutorialModAlert(b:Block):void {
@@ -23,6 +24,12 @@ private function primTutorialModAlert(b:Block):void {
     // * First argument is the title for the alert box.
     // * Second argument is the message.
     DialogBox.notify("messaeg!", interp.arg(b, 0));
+}
+private function primAdvancedDialog(b:Block):void {
+    // DialogBox.notify usage:
+    // * First argument is the title for the alert box.
+    // * Second argument is the message.
+    DialogBox.notify(interp.arg(b, 0), interp.arg(b, 1));
 }
 
 }}

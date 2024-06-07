@@ -678,6 +678,13 @@ public class ScratchRuntime {
 				}
 				activeHats.push(hat);
 			}
+		} else if ('whenHat' == hat.op) {
+			if(interp.boolarg(hat, 0)) {
+				if (triggeredHats.indexOf(hat) == -1) {
+					if (!interp.isRunning(hat, target)) interp.toggleThread(hat, target);
+				}
+				activeHats.push(hat);
+			}
 		} else if (app.jsEnabled) {
 			var unpackedOp:Array = ExtensionManager.unpackExtensionAndOp(hat.op);
 			var extName:String = unpackedOp[0];

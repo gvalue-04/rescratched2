@@ -142,7 +142,8 @@ public class Specs {
 		["direction",							"r", 1, "heading"],
 
 		// dialogs
-		["alert %s", " ", 13, "tutorialModAlert", "Hello!"],
+		["dialog %s", " ", 13, "tutorialModAlert", "Hello!"],
+		["title %s message %s", " ", 13, "advancedDialog", "OMG!!", "TEH EPIK DUCK IS COMING!!"],
 		// looks
 		["say %s for %n secs",					" ", 2, "say:duration:elapsed:from:",	"Hello!", 2],
 		["say %s",								" ", 2, "say:",							"Hello!"],
@@ -231,6 +232,8 @@ public class Specs {
 		["when backdrop switches to %m.backdrop", "h", 5, "whenSceneStarts", 	"backdrop1"],
 		["--"],
 		["when %m.triggerSensor > %n",			"h", 5, "whenSensorGreaterThan", "loudness", 10],
+		["--"],
+		["when %b",                             "h", 5, "whenHat",              ""],
 		["--"],
 		["when I receive %m.broadcast",			"h", 5, "whenIReceive",			""],
 		["broadcast %m.broadcast",				" ", 5, "broadcast:",			""],

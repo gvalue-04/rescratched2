@@ -495,6 +495,7 @@ public class Interpreter {
 		primTable["stopAll"]			= function(b:*):* { app.runtime.stopAll(); yield = true; };
 		primTable["stopScripts"]		= primStop;
 		primTable["warpSpeed"]			= primOldWarpSpeed;
+		primTable["whenHat"] = primNoop;
 
 		// procedures
 		primTable[Specs.CALL]			= primCall;
