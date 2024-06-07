@@ -73,6 +73,7 @@ public class Specs {
 		[11, "Parameter",	parameterColor],
 		[12, "List",		listColor],
 		[13, "Dialogs",   0x60a05c],
+		[14, "Annotations", 0x009870],
 		[20, "Extension",	extensionsColor],
 	];
 
@@ -112,6 +113,8 @@ public class Specs {
 
 	public static var commands:Array = [
 		// block specification					type, cat, opcode			default args (optional)
+		// annotations
+		["// %s",                               " ", 14, "annotationBlock",         "This does this."],
 		// motion
 		["move %n steps",						" ", 1, "forward:",					10],
 		["turn @turnRight %n degrees",			" ", 1, "turnRight:",				15],
