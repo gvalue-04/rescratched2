@@ -53,6 +53,7 @@ public class ExtensionManager {
 	static public const picoBoardExt:String = 'PicoBoard';
 	static public const wedoExt:String = 'LEGO WeDo';
 	static public const wedo2Ext:String = 'LEGO WeDo 2.0';
+	static public const box2DExt:String = 'Griffpatch Box2D';
 
 	// Experimental extensions must be hosted on one of these domains
 	// These should start with '.' to avoid accepting things like 'malicious.not_github.io'
