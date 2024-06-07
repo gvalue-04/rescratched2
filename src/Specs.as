@@ -115,6 +115,7 @@ public class Specs {
 		// block specification					type, cat, opcode			default args (optional)
 		// annotations
 		["// %s",                               " ", 14, "annotationBlock",         "This does this."],
+		["/* %s",                               "c", 14, "annotationC",             "This is a C comment."],
 		// motion
 		["move %n steps",						" ", 1, "forward:",					10],
 		["turn @turnRight %n degrees",			" ", 1, "turnRight:",				15],

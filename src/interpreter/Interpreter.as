@@ -471,6 +471,8 @@ public class Interpreter {
 
 	private function initPrims():void {
 		primTable = new Dictionary();
+		// annotations
+		primTable ["annotationC"]       = primAnnotationC;
 		// control
 		primTable["whenGreenFlag"]		= primNoop;
 		primTable["whenKeyPressed"]		= primNoop;
@@ -532,6 +534,10 @@ public class Interpreter {
 		}
 	}
 
+	private function primAnnotationC(b:Block):void {
+    	if (b.subStack1 == null) return;
+    	startCmdList(b.subStack1);
+	}
 	public function primNoop(b:Block):void { }
 
 	private function primForLoop(b:Block):void {
