@@ -55,7 +55,7 @@ public class PaletteBuilder {
 	public static function strings():Array {
 		return [
 			'Stage selected:', 'No motion blocks',
-			'Make a Block', 'Make a List', 'Make a Variable',
+			'Make a Function', 'Make a List', 'Make a Variable',
 			'New List', 'List name', 'New Variable', 'Variable name',
 			'New Block', 'Add an Extension'];
 	}
@@ -127,7 +127,7 @@ public class PaletteBuilder {
 	private function showMyBlocksPalette(shiftKey:Boolean):void {
 		// show creation button, hat, and call blocks
 		var catColor:int = Specs.blockColor(Specs.procedureColor);
-		addItem(new Button(Translator.map('Make a Block'), makeNewBlock, false, '/help/studio/tips/blocks/make-a-block/'));
+		addItem(new Button(Translator.map('Make a Function'), makeNewBlock, false, '/help/studio/tips/blocks/make-a-block/'));
 		var definitions:Array = app.viewedObj().procedureDefinitions();
 		if (definitions.length > 0) {
 			nextY += 5;
@@ -148,7 +148,6 @@ public class PaletteBuilder {
 	}
 
 	protected function addExtensionButtons():void {
-		addAddExtensionButton();
 		if (Scratch.app.isExtensionDevMode) {
 			var extensionDevManager:ExtensionDevManager = Scratch.app.extensionManager as ExtensionDevManager;
 			if (extensionDevManager) {
@@ -157,9 +156,6 @@ public class PaletteBuilder {
 		}
 	}
 
-	protected function addAddExtensionButton():void {
-		addItem(new Button(Translator.map('Add an Extension'), showAnExtension, false, '/help/studio/tips/blocks/add-an-extension/'));
-	}
 
 	private function showDataCategory():void {
 		var catColor:int = Specs.variableColor;

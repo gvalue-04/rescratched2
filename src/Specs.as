@@ -74,7 +74,7 @@ public class Specs {
 		[12, "List",		listColor],
 		[13, "Dialogs",   0x60a05c],
 		[14, "Annotations", 0x009870],
-		[15, "User Blocks", 0x808080],
+		[15, "Fun Blocks", 0x808080],
 		[20, "Extension",	extensionsColor],
 	];
 
@@ -251,6 +251,7 @@ public class Specs {
 		["if %b then",							"c", 6, "doIf"],
 		["if %b then",							"e", 6, "doIfElse"],
 		["wait until %b",						" ", 6, "doWaitUntil"],
+		["while %b",                            "c", 6, "doWhile"],
 		["repeat until %b",						"c", 6, "doUntil"],
 		["-"],
 		["stop %m.stop",						"f", 6, "stopScripts", "all"],
@@ -269,6 +270,7 @@ public class Specs {
 		["if %b then",							"c", 106, "doIf"],
 		["if %b then",							"e", 106, "doIfElse"],
 		["wait until %b",						" ", 106, "doWaitUntil"],
+		["while %b",                            "c", 106, "doWhile"],
 		["repeat until %b",						"c", 106, "doUntil"],
 		["-"],
 		["stop %m.stop",						"f", 106, "stopScripts", "all"],

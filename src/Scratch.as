@@ -1200,7 +1200,7 @@ public class Scratch extends Sprite {
 	public function exportProjectToFile(fromJS:Boolean = false, saveCallback:Function = null):void {
 		function squeakSoundsConverted():void {
 			scriptsPane.saveScripts(false);
-			var projectType:String = extensionManager.hasExperimentalExtensions() ? '.sbx' : '.rs2' ;
+			var projectType:String = extensionManager.hasExperimentalExtensions() ? '.sbx' : '.rs2';
 			var defaultName:String = StringUtil.trim(projectName());
 			defaultName = ((defaultName.length > 0) ? defaultName : 'project') + projectType;
 			var zipData:ByteArray = projIO.encodeProjectAsZipFile(stagePane);

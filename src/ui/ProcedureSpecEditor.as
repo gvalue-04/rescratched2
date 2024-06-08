@@ -79,7 +79,7 @@ public class ProcedureSpecEditor extends Sprite {
 
 	public static function strings():Array {
 		return [
-			'Options', 'Run without screen refresh',
+			'Options', 'Warp speed',
 			'Add number input:',
 			'Add string input:',
 			'Add boolean input:',
@@ -209,7 +209,7 @@ public class ProcedureSpecEditor extends Sprite {
 	private function addwarpCheckbox():void {
 		addChild(warpCheckbox = new IconButton(null, 'checkbox'));
 		warpCheckbox.disableMouseover();
-		addChild(warpLabel = makeLabel('Run without screen refresh', 14));
+		addChild(warpLabel = makeLabel('Warp speed', 14));
 	}
 
 	private function makeLabel(s:String, fontSize:int):TextField {
